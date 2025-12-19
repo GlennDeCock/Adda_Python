@@ -13,6 +13,7 @@ We'll try to make an executable of this project using PyInstaller
 import asyncio
 import logging
 import os
+import sys
 import threading
 from datetime import datetime
 from tkinter import Tk, simpledialog
@@ -53,7 +54,7 @@ if __name__ == '__main__':
     # Check if form was completed
     if not gui.form_completed:
         logging.warning("Application closed without completing form")
-        exit(0)
+        sys.exit(0)
     
     logging.info("─────────────────────────────────────────────")
     logging.info("📋 Processing participant information...")

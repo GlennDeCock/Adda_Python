@@ -1,0 +1,18 @@
+DATA_CAPTURE:
+  DIRECTORIES:
+    - 'eeg'
+    - 'gsr'
+    - 'websocket'
+  ROOT_DATA_PATH: './data'  # Relative to current working directory
+  SD_CARD_TIME: "30m"
+  EEG: "eeg.csv"
+  GSR:
+    MOVEMENT: "gsr_mov.csv"
+    PPG: "gsr_ppg.csv"
+    EDA: "gsr_eda.csv"
+  STREAM:
+    IP: "192.168.0.188"
+    PORT: 8081
+  WS:
+    IP: "0.0.0.0"  # Bind to all network interfaces for Pico VR headset
+    PORT: 8080  # Changed from 8765 to 8080 to match test scripts
