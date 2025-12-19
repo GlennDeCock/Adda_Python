@@ -60,7 +60,14 @@ if __name__ == '__main__':
     logging.info("📋 Processing participant information...")
     
     # load the config file - use the script's directory, not current working directory
-    script_dir = Path(__file__).parent
+    # For PyInstaller executables, use sys.executable location instead of __file__
+    if getattr(sys, 'frozen', False):
+        # Running as compiled executable
+        script_dir = Path(sys.executable).parent
+    else:
+        # Running as script
+        script_dir = Path(__file__).parent
+    
     config = load_config(script_dir / "conf.yaml")
     logging.info("✓ Configuration loaded")
     
