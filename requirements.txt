@@ -1,0 +1,27 @@
+# Core Dependencies
+websockets>=12.0
+pandas>=2.1.0
+numpy>=1.24.0
+PyYAML>=6.0
+
+# GUI (if using customtkinter)
+# customtkinter>=5.2.0
+# Pillow>=10.0.0
+
+# Standard library (included with Python, listed for reference)
+# - asyncio
+# - logging
+# - tkinter
+# - threading
+# - datetime
+# - socket
+# - functools
+# - os
+# - ast
+
+# Development/Testing
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+
+# Building Executable
+# PyInstaller>=6.0.0
